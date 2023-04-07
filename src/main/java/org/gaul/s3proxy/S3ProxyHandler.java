@@ -1971,6 +1971,9 @@ public class S3ProxyHandler {
                 .contentLength(contentLength);
 
         String storageClass = request.getHeader(AwsHttpHeaders.STORAGE_CLASS);
+        logger.debug("$$$$$$$$$$$$$$");
+        logger.debug("storage class is {}", storageClass);
+
         if (storageClass == null || storageClass.equalsIgnoreCase("STANDARD")) {
             // defaults to STANDARD
         } else {
